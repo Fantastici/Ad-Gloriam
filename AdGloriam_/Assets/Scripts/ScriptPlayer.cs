@@ -10,14 +10,32 @@ public class ScriptPlayer : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public Animator animator;
+    public bool IsJumping;
+  
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+    }
+    void FixedUpdate()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
     }
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        if(isGrounded== true)
+        {
+            if (Input.GetButtonDown("jump"))
+            {
+                rb.velocity = Vector2.up * jumpForce;
+            }
+        }
+        RunAnimations();
+    }
+    void RunAnimations()
+    {
+        animator.SetBool("IsJumping", IsJumping);
     }
     /* public float speed = 5f;
      public float JumpForce = 1;

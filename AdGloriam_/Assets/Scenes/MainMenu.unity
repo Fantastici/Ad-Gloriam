@@ -692,7 +692,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1233453011}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18937ce52bb4c4ba8adefb39eebdbf73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 592f13db475c1a748ac1678e60c7fad9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1352,7 +1352,7 @@ GameObject:
   - component: {fileID: 1411329062}
   - component: {fileID: 1411329061}
   m_Layer: 5
-  m_Name: GameCenter
+  m_Name: Mail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

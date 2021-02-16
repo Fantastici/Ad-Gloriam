@@ -12,7 +12,7 @@ public class ScriptPlayer : MonoBehaviour
     public LayerMask whatIsGround;
     public Animator animator;
     public bool IsJumping;
-  
+    public bool doubleAllowed = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,18 +24,45 @@ public class ScriptPlayer : MonoBehaviour
     }
     void Update()
     {
-        if(isGrounded== true)
+        if (isGrounded)
         {
-            if (Input.GetButtonDown("jump"))
-            {
-                rb.velocity = Vector2.up * jumpForce;
-            }
+            doubleAllowed = true;
         }
+        if (isGrounded == true && Input.GetButtonDown("jump"))
+        {
+            Jump();
+        }else if(doubleAllowed && Input.GetButtonDown("jump"))
+        {
+            Jump();
+            doubleAllowed = false;
+        }
+        
         RunAnimations();
+    }
+
+    void Jump()
+    {
+        rb.velocity = Vector2.up * jumpForce;
     }
     void RunAnimations()
     {
-        animator.SetBool("IsJumping", IsJumping);
+        if (rb.velocity.y > 0)
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        if (rb.velocity.y < 0)
+        {
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsFalling", true);
+        }
+        if (isGrounded == true)
+        {
+            animator.SetBool("IsFalling", false);
+            
+        }
+
+
+
     }
     /* public float speed = 5f;
      public float JumpForce = 1;

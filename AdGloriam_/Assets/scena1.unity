@@ -2037,7 +2037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913784700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.04, y: 2.822, z: 0}
+  m_LocalPosition: {x: 0.41, y: 2.822, z: 0}
   m_LocalScale: {x: 25.242199, y: 12.019537, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2221,17 +2221,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5655852637107820731, guid: 01e2f3c832fb94471acb63925517b235, type: 3}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 4982963530626926789, guid: 01e2f3c832fb94471acb63925517b235, type: 3}
       propertyPath: m_Name
       value: 'IS - Arrow '
       objectReference: {fileID: 0}
     - target: {fileID: 4982963530626926841, guid: 01e2f3c832fb94471acb63925517b235, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69.4
+      value: 39.1
       objectReference: {fileID: 0}
     - target: {fileID: 4982963530626926841, guid: 01e2f3c832fb94471acb63925517b235, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 4982963530626926841, guid: 01e2f3c832fb94471acb63925517b235, type: 3}
       propertyPath: m_LocalPosition.z

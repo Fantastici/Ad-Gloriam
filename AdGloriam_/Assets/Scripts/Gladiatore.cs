@@ -68,13 +68,7 @@ public class Gladiatore : MonoBehaviour
 
         }
     }
-    /*void Death()
-    {
-        if (isDead)
-        {
-            animator.SetTrigger("Die");
-        }
-    }*/
+   
     void HandleAttacks()
     {
         if (IsAttacking)

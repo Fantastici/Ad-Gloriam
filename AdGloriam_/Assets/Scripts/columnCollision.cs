@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collisionPlayer : MonoBehaviour
+public class columnCollision : MonoBehaviour
 {
 
+   
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag.Equals("Column"))
+        if (coll.gameObject.tag.Equals("Player"))
         {
-            _ = gameObject.isStatic;
+            _ = coll.rigidbody.sleepMode;
         }
-
+        
     }
 }

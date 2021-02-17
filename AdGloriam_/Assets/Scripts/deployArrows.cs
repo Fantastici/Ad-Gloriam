@@ -6,8 +6,8 @@ public class deployArrows : MonoBehaviour
 {
     public GameObject arrowPrefab;
     public float respawnTime = 1.0f;
-    public float yLb = 1.36f;
-    public float yUb = 4.15f;
+    public float yLb = 0.49f;
+    public float yUb = 3.73f;
     private Vector2 screenBounds;
 
     // Start is called before the first frame update

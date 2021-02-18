@@ -12,4 +12,8 @@ public class StartMenu : MonoBehaviour
     {
         Application.LoadLevel(nome_scena);
     }
+    public void sound_volume(float volume)
+    {
+        PlayerPrefs.SetFloat("volume", volume);
+    }
 }

@@ -27,10 +27,5 @@ public class arrow : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    /*Metodo che decrementa la vita del player*/
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameControl.health -= 1;
-    }
 }
 

@@ -26,4 +26,9 @@ public class NemicoScena : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    /*metodo che decrementa la vita*/
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameControl.health -= 1;
+    }
 }

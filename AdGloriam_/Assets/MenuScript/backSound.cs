@@ -11,6 +11,7 @@ public class backSound : MonoBehaviour
         {
             GetComponent<AudioSource>().Play();
             gameObject.name = "backsound";
+            PlayerPrefs.SetFloat("volume", 0.3f);
         }
     }
 

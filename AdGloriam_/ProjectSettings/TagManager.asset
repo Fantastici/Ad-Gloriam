@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Column
   - ShortColumn
+  - Arrow
   layers:
   - Default
   - TransparentFX

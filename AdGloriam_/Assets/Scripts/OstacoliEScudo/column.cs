@@ -25,5 +25,14 @@ public class column : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (FindObjectOfType<Gladiatore>().IsDead())
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
+
+    /*public void SetVelocity()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+    }*/
 }

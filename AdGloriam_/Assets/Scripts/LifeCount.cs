@@ -15,31 +15,21 @@ public class LifeCount : MonoBehaviour
             return;
         }
         livesRemaining--;
-        if (livesRemaining == 2)
-        {
-            FindObjectOfType<LifeAnimator1>().animator.SetTrigger("Life1Death");
-        }
-        if (livesRemaining == 1)
-        {
-            FindObjectOfType<LifeAnimator2>().animator.SetTrigger("Life2Death");
-        }
+        lives[livesRemaining].enabled = false;
         if (livesRemaining == 0)
         {
-            FindObjectOfType<LifeAnimator3>().animator.SetTrigger("Life3Death");
             FindObjectOfType<Gladiatore>().Die();
         }
-        //lives[livesRemaining].gameObject.SetActive(false);
-       
 
     }
     // Start is called before the first frame update
   
     // Update is called once per frame
-   void Update()
+   /* void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             LoseLife();
         }
-    }
+    }*/
 }

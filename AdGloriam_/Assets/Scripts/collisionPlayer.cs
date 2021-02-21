@@ -6,14 +6,8 @@ using UnityEngine.UI;
 public class collisionPlayer : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag.Equals("Arrow"))
-        {
-            Debug.Log("collisione");
-            FindObjectOfType<LifeCount>().LoseLife();
-        }
-
-        
+        FindObjectOfType<LifeCount>().LoseLife();
     }
 }

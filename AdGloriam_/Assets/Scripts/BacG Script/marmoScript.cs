@@ -24,11 +24,7 @@ public class marmoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         material.mainTextureOffset += offset * Time.deltaTime;
     }
-    public void SetVelocity(float x, float y)
-    {
-        offset = new Vector2(x, y);
-    }
-
 }

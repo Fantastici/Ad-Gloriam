@@ -25,5 +25,6 @@ public class column : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 }

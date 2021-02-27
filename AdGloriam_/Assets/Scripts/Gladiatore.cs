@@ -89,7 +89,15 @@ public class Gladiatore : MonoBehaviour
         if (IsAttacking)
         {
             animator.SetTrigger("Attack");
+            AttackSound.Attack();
+
+
         }
+    }
+    public void Damage()
+    {
+        animator.SetTrigger("Hurt");
+        
     }
     void resetValues()
     {

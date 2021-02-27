@@ -11,6 +11,7 @@ public class collisionPlayer : MonoBehaviour
         if (collision.gameObject.tag.Equals("Arrow"))
         {
             Debug.Log("collisione");
+            SoundManagerScript.PlaySound("hit");
             FindObjectOfType<LifeCount>().LoseLife();
         }
 

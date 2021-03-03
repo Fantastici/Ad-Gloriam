@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class StartMenu : MonoBehaviour
     }
     public void play(string nome_scena)
     {
-        Application.LoadLevel(nome_scena);
+        SceneManager.LoadScene(nome_scena);
     }
     public void sound_volume(float volume)
     {

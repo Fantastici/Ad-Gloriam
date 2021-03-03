@@ -36,7 +36,7 @@ public class ClickPauseMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
+        GamePaused = false;
         SceneManager.LoadScene("MainMenu");
     }
 

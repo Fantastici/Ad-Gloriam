@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class score : MonoBehaviour
 {
-    public Text scoreText;
+    public Text scoreText; 
     public float scoreAmount;
     public float pointIncreasePerSecond;
     // Start is called before the first frame update
@@ -19,10 +19,24 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = ToRoman((int)scoreAmount);
-        scoreAmount += pointIncreasePerSecond * Time.deltaTime;
+        if (FindObjectOfType<Gladiatore>().isDead == false)
+        {
+            scoreText.text = ToRoman((int)scoreAmount);
+            scoreAmount += pointIncreasePerSecond * Time.deltaTime;
+        }
+        else
+        {
+            PunteggioFinale();
+        }
        
     }
+    public String PunteggioFinale()
+    {
+        scoreText.text = ToRoman((int)scoreAmount);
+        scoreAmount += pointIncreasePerSecond * 0;
+        return scoreText.text;
+    }
+   
     public static string ToRoman(int number)
     {
         if ((number < 0) || (number > 3999)) throw new ArgumentOutOfRangeException("insert value betwheen 1 and 3999");

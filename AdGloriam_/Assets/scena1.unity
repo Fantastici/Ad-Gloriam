@@ -813,14 +813,14 @@ RectTransform:
   m_GameObject: {fileID: 143018480}
   m_LocalRotation: {x: -0, y: -0, z: -0.0016194612, w: 0.99999875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.189282, y: 2.189282, z: 2.189282}
+  m_LocalScale: {x: 2.4957814, y: 2.4957814, z: 2.4957814}
   m_Children: []
   m_Father: {fileID: 1133953814}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.186}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -64}
+  m_AnchoredPosition: {x: 19, y: -67}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143018482
@@ -1879,8 +1879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 311, y: 139}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 357.07, y: 166.73}
+  m_SizeDelta: {x: 167.34998, y: 35.53015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366894509
 MonoBehaviour:
@@ -1904,7 +1904,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1c29be5b42828e04e9192d3c9ab32966, type: 3}
-    m_FontSize: 27
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -3201,14 +3201,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1016453423}
         m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 5
+        m_MethodName: Share
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: scena1
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &655981007
@@ -3931,7 +3931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 129}
+  m_AnchoredPosition: {x: -7.1, y: 178.8}
   m_SizeDelta: {x: 26.531525, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782029428
@@ -5353,6 +5353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOver: {fileID: 1016453418}
+  shareMessage: 
 --- !u!1 &1035436921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6155,7 +6156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.186}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 128.53, y: -82.18}
+  m_AnchoredPosition: {x: 97, y: -62}
   m_SizeDelta: {x: 37.53282, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1300058035
@@ -8953,14 +8954,14 @@ RectTransform:
   m_GameObject: {fileID: 2074931617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.801356, y: 2.801356, z: 2.801356}
+  m_LocalScale: {x: 3.8804386, y: 3.8804386, z: 3.8804386}
   m_Children: []
   m_Father: {fileID: 1133953814}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 19}
+  m_AnchoredPosition: {x: 8, y: 50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074931619

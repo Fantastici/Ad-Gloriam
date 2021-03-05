@@ -27,5 +27,7 @@ public class arrow : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+   
+    
 }
 

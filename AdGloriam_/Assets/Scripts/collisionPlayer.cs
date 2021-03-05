@@ -6,9 +6,16 @@ using UnityEngine.UI;
 public class collisionPlayer : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<LifeCount>().LoseLife();
+        if (collision.gameObject.tag.Equals("Arrow"))
+        {
+            Debug.Log("collisione");
+            SoundManagerScript.PlaySound("hit");
+            FindObjectOfType<LifeCount>().LoseLife();
+        }
+
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

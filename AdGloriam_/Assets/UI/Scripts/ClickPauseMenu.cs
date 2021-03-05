@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClickPauseMenu : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class ClickPauseMenu : MonoBehaviour
         GamePaused = true;
         PauseScreen.SetActive(true);
         PauseButton.SetActive(true);
+    }
+    public void LoadMenu()
+    {
+        GamePaused = false;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ResumeGame()

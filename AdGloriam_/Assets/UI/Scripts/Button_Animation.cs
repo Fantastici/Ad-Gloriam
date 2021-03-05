@@ -15,8 +15,8 @@ public class Button_Animation : MonoBehaviour
     {
         
     }
-    public void button_touch()
+    public void button_touch(string nomeAnimazione)
     {
-        GetComponent<Animation>().Play("PauseAnimation");
+        GetComponent<Animation>().Play(nomeAnimazione);
     }
 }

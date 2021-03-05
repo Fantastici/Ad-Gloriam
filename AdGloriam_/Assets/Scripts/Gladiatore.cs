@@ -51,9 +51,24 @@ public class Gladiatore : MonoBehaviour
     public void Die()
     {
         isDead = true;
-        //Death();
+        FindObjectOfType<marmoScript>().SetVelocity(0,0);
+        FindObjectOfType<bgScript>().SetVelocity(0, 0);
+       // FindObjectOfType<column>().SetVelocity();
+        animator.SetTrigger("Dead");
+        
         //theScoreManager.scoreIncreasing = false;
-        FindObjectOfType<LevelManager>().Restart();
+    }
+    /*public IEnumerator pausa(float x)
+    {
+        yield return new WaitForSeconds(x);
+    }*/
+    public  bool IsDead()
+    {
+        if (isDead)
+        {
+            return true;
+        } else
+            return false;
 
     }
     void Jump()
@@ -74,7 +89,15 @@ public class Gladiatore : MonoBehaviour
         if (IsAttacking)
         {
             animator.SetTrigger("Attack");
+            AttackSound.Attack();
+
+
         }
+    }
+    public void Damage()
+    {
+        animator.SetTrigger("Hurt");
+        
     }
     void resetValues()
     {
@@ -102,10 +125,7 @@ public class Gladiatore : MonoBehaviour
             animator.SetBool("IsFalling", false);
         }
         
-        if (isDead == true)
-        {
-            animator.SetBool("IsDead", true);
-        }
+       
 
 
     }

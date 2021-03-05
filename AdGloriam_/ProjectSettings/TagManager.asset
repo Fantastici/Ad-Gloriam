@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Column
   - ShortColumn
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -44,11 +45,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: BackGround
-    uniqueID: 3341838713
+    uniqueID: 3135201477
     locked: 0
   - name: MiddleGround
-    uniqueID: 2408129475
+    uniqueID: 1072072633
     locked: 0
   - name: ForeGround
-    uniqueID: 332137513
+    uniqueID: 1854307503
     locked: 0

@@ -10,4 +10,9 @@ public class collisionPlayer : MonoBehaviour
     {
         FindObjectOfType<LifeCount>().LoseLife();
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collisione in entrata");
+    }
 }

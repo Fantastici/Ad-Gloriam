@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOverScreen : MonoBehaviour
+public class GiocatoreColonne : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Setup(int score)
+    void Start()
     {
-
         
     }
 

@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class GiocatoreColonne : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float columnSpeed;
+  
     void Start()
     {
+        columnSpeed = FindObjectOfType<column>().getColumnSpeed();
         
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag.Equals("Column"))
+        {
+
+            Debug.Log("collisione");
+               // FindObjectOfType<Gladiatore>().aumentaSpeed();
+        }
+    }
+    
 }

@@ -18,10 +18,12 @@ public class LifeCount : MonoBehaviour
         if (livesRemaining == 2)
         {
             FindObjectOfType<LifeAnimator1>().animator.SetTrigger("Life1Death");
+            
         }
         if (livesRemaining == 1)
         {
             FindObjectOfType<LifeAnimator2>().animator.SetTrigger("Life2Death");
+            
         }
         if (livesRemaining == 0)
         {

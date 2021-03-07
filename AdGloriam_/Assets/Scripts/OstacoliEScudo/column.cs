@@ -30,6 +30,10 @@ public class column : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
         }
     }
+    public float getColumnSpeed()
+    {
+        return -(speed);
+    }
 
     /*public void SetVelocity()
     {

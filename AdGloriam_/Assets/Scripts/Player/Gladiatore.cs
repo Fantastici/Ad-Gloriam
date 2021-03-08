@@ -19,6 +19,7 @@ public class Gladiatore : MonoBehaviour
     public bool isColliso = false;
     private float speed=0;
     public bool IsShieldOn = false;
+    public bool isOut=false;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class Gladiatore : MonoBehaviour
         {
 
             Time.timeScale = 0;
+            isOut = true;
             
         }
         if (isGrounded)
@@ -72,6 +74,10 @@ public class Gladiatore : MonoBehaviour
         
 
         RunAnimations();
+    }
+    public bool IsOut()
+    {
+        return isOut;
     }
    /*public float getXiniziale()
     {
@@ -241,5 +247,6 @@ public class Gladiatore : MonoBehaviour
          animator.SetFloat("Running", Mathf.Abs(horizontalmove));
          animator.SetBool("IsJumping", IsJumping);
      }*/
+
 }
 

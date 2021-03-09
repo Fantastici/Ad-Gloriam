@@ -40,7 +40,6 @@ public class Gladiatore : MonoBehaviour
         if (transform.position.x < screenBounds.x * -2)
         {
 
-            Time.timeScale = 0;
             isOut = true;
             
         }

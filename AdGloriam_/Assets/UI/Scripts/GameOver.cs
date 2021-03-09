@@ -13,12 +13,14 @@ public class GameOver : MonoBehaviour
 
         if (FindObjectOfType<Gladiatore>().isDead )
             {
-            _ = WaitTime();
+            
             finito.SetActive(true);
-            }
+           
+        }
         if (FindObjectOfType<Gladiatore>().isOut)
         {
             finito.SetActive(true);
+            
         }
       
     }

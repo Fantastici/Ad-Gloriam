@@ -24,12 +24,10 @@ public class score : MonoBehaviour
             scoreText.text = ToRoman((int)scoreAmount);
             scoreAmount += pointIncreasePerSecond * Time.deltaTime;
         }
-        else
-        {
-            PunteggioFinale();
-        }
+      
        
     }
+  
     public String PunteggioFinale()
     {
         scoreText.text = ToRoman((int)scoreAmount);
@@ -37,7 +35,7 @@ public class score : MonoBehaviour
         return scoreText.text;
     }
    
-    public static string ToRoman(int number)
+    public string ToRoman(int number)
     {
         if ((number < 0) || (number > 3999)) throw new ArgumentOutOfRangeException("insert value betwheen 1 and 3999");
         if (number < 1) return string.Empty;

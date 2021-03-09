@@ -1197,6 +1197,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Column
       objectReference: {fileID: 0}
+    - target: {fileID: 6128962064956240648, guid: ab32226f02a45431eae75e91367a2805, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab32226f02a45431eae75e91367a2805, type: 3}
 --- !u!1 &209641157
@@ -6180,6 +6184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 229038333}
+  scoreAmount: 0
+  pointIncreasePerSecond: 0
 --- !u!1 &1240026443
 GameObject:
   m_ObjectHideFlags: 0

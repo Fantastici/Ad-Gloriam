@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gladiatore : MonoBehaviour
 {
+    private Vector2 screenBounds;
     public float jumpForce;
     private Rigidbody2D rb;
     public bool isGrounded;
@@ -15,12 +16,18 @@ public class Gladiatore : MonoBehaviour
     public bool doubleAllowed = false;
     public bool isDead = false;
     public bool IsAttacking;
-   //private ScoreManager theScoreManager;
+    public bool isColliso = false;
+    private float speed=0;
+    public bool IsShieldOn = false;
+    public bool isOut=false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //theScoreManager = FindObjectOfType<ScoreManager>();
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+    
+        
 
     }
     void FixedUpdate()
@@ -29,6 +36,13 @@ public class Gladiatore : MonoBehaviour
     }
     void Update()
     {
+       
+        if (transform.position.x < screenBounds.x * -2)
+        {
+
+            isOut = true;
+            
+        }
         if (isGrounded)
         {
             doubleAllowed = true;
@@ -36,9 +50,21 @@ public class Gladiatore : MonoBehaviour
         if (isGrounded == true && Input.GetButtonDown("jump"))
         {
             Jump();
-        }else if(doubleAllowed && Input.GetButtonDown("jump"))
+            /*if (isColliso && rb.velocity.y > 0)
+            {
+                rb.AddForce(Vector3.right * 1, ForceMode2D.Impulse);
+            }
+            isColliso = false;*/
+
+        }
+        else if(doubleAllowed && Input.GetButtonDown("jump"))
         {
             Jump();
+           /* if (isColliso && rb.velocity.y > 0)
+            {
+                rb.AddForce(Vector3.right * 1, ForceMode2D.Impulse);
+            }
+            isColliso = false;*/
             doubleAllowed = false;
         }
         AttackInput();
@@ -48,6 +74,18 @@ public class Gladiatore : MonoBehaviour
 
         RunAnimations();
     }
+    public bool IsOut()
+    {
+        return isOut;
+    }
+   /*public float getXiniziale()
+    {
+        return xIniziale;
+    }
+    public float getXcorrente()
+    {
+        return xCorrente;
+    }*/
     public void Die()
     {
         isDead = true;
@@ -62,6 +100,10 @@ public class Gladiatore : MonoBehaviour
     {
         yield return new WaitForSeconds(x);
     }*/
+    public void setPlayerSpeed(float speed)
+    {
+        rb.velocity = new Vector2(speed, 0);
+    }
     public  bool IsDead()
     {
         if (isDead)
@@ -71,9 +113,14 @@ public class Gladiatore : MonoBehaviour
             return false;
 
     }
+    public void aumentaSpeed()
+    {
+        rb.AddForce(Vector3.right, ForceMode2D.Impulse);
+    }
     void Jump()
     {
         rb.velocity = Vector2.up * jumpForce;
+        
     }
     void AttackInput()
     {
@@ -94,15 +141,41 @@ public class Gladiatore : MonoBehaviour
 
         }
     }
+    /*public bool isCollisione()
+    {
+        return isColliso = true;
+    }*/
+    public bool isShieldOn()
+    {
+        if (IsShieldOn)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void ShieldOn()
+    {
+        animator.SetBool("Shield",true);
+        IsShieldOn = true;
+    }
+    public void ShieldOff()
+    {
+        animator.SetBool("Shield", false);
+    }
+    
     public void Damage()
     {
-        animator.SetTrigger("Hurt");
+        animator.SetTrigger("Pain");
         
     }
     void resetValues()
     {
         IsAttacking = false;
     }
+    
     void RunAnimations()
     {
         /*
@@ -113,16 +186,18 @@ public class Gladiatore : MonoBehaviour
         */
         if (rb.velocity.y > 0)
         {
-            animator.SetBool("IsJumping", true);
+            animator.SetBool("Jumping", true);
         }
         if (rb.velocity.y < 0)
         {
-            animator.SetBool("IsJumping", false);
-            animator.SetBool("IsFalling", true);
+            animator.SetBool("Jumping", false);
+            animator.SetBool("Falling", true);
         }
-        if (isGrounded == true)
+        if (isGrounded)
         {
-            animator.SetBool("IsFalling", false);
+            animator.SetBool("Falling", false);
+            animator.SetTrigger("Grounded");
+            
         }
         
        
@@ -171,5 +246,6 @@ public class Gladiatore : MonoBehaviour
          animator.SetFloat("Running", Mathf.Abs(horizontalmove));
          animator.SetBool("IsJumping", IsJumping);
      }*/
+
 }
 

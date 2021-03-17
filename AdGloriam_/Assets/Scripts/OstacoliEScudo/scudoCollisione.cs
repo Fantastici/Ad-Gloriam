@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class scudoCollisione : MonoBehaviour
 {
+    public bool timeRuns;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
             SoundManagerScript.PlaySound("scudoSound");
             Destroy(gameObject);
+            FindObjectOfType<Gladiatore>().ShieldOn();
         }
     }
 }

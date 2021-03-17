@@ -8,7 +8,7 @@ public class GameOverUI : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject GameOver;
-	public string shareMessage;
+    private string shareMessage;
    public void Home(string nome_scena)
     {
         SceneManager.LoadScene(nome_scena);

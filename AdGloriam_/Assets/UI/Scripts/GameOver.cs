@@ -11,11 +11,15 @@ public class GameOver : MonoBehaviour
     void Update()
     {
 
-            if (FindObjectOfType<Gladiatore>().isDead)
+        if (FindObjectOfType<Gladiatore>().isDead )
             {
             _ = WaitTime();
             finito.SetActive(true);
             }
+        if (FindObjectOfType<Gladiatore>().isOut)
+        {
+            finito.SetActive(true);
+        }
       
     }
     private IEnumerator WaitTime()

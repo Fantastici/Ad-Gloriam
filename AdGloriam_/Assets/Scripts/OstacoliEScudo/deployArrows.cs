@@ -23,6 +23,16 @@ public class deployArrows : MonoBehaviour
         a.transform.position = new Vector2(screenBounds.x * 8, Random.Range(yLb, yUb));
 
     }
+    public bool isArrow()
+    {
+        bool verifica = false;
+        if (arrowPrefab != null)
+        {
+            Debug.Log("ciao");
+            verifica = true;
+        }
+        return verifica;
+    }
 
     IEnumerator arrowWawe()
     {

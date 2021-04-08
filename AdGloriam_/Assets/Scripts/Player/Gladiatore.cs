@@ -20,6 +20,7 @@ public class Gladiatore : MonoBehaviour
     private float speed=0;
     public bool IsShieldOn = false;
     public bool isOut=false;
+    public bool isJump = false;
 
     void Start()
     {
@@ -121,7 +122,9 @@ public class Gladiatore : MonoBehaviour
     {
         rb.velocity = Vector2.up * jumpForce;
         
+        
     }
+   
     void AttackInput()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -243,7 +246,7 @@ public class Gladiatore : MonoBehaviour
 
      void RunAnimations()
      {
-         animator.SetFloat("Running", Mathf.Abs(horizontalmove));
+       
          animator.SetBool("IsJumping", IsJumping);
      }*/
 

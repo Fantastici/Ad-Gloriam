@@ -27,6 +27,13 @@ public class score : MonoBehaviour
 
        
     }
+    public float getScoreAmount()
+    {
+       
+        scoreAmount += pointIncreasePerSecond * 0;
+        return scoreAmount;
+    }
+
     public String PunteggioFinale()
     {
         scoreText.text = ToRoman((int)scoreAmount);

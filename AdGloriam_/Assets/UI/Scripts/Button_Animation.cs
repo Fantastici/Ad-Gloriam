@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Button_Animation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+ 
+    public Animator ani;
+   
+
+
+
+  
+    public void Press()
+
     {
-        
-    }
-    public void button_touch(string nomeAnimazione)
-    {
-        GetComponent<Animation>().Play(nomeAnimazione);
+        ani.enabled = true;
+
+
     }
 }

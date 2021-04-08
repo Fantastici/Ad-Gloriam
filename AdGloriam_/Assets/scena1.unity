@@ -4053,7 +4053,6 @@ GameObject:
   - component: {fileID: 782029429}
   - component: {fileID: 782029428}
   - component: {fileID: 782029431}
-  - component: {fileID: 782029432}
   m_Layer: 5
   m_Name: PauseSwordButton
   m_TagString: Untagged
@@ -4070,14 +4069,14 @@ RectTransform:
   m_GameObject: {fileID: 782029426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.1702514, y: 4.1702514, z: 4.1702514}
+  m_LocalScale: {x: 6.083154, y: 6.083154, z: 6.083154}
   m_Children: []
   m_Father: {fileID: 116448064}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 129}
+  m_AnchoredPosition: {x: -3, y: 209}
   m_SizeDelta: {x: 26.531525, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782029428
@@ -4147,18 +4146,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 782029431}
-        m_TargetAssemblyTypeName: Button_Animation, Assembly-CSharp
-        m_MethodName: button_touch
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AnimazionePausa
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &782029429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4197,34 +4184,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782029426}
   m_CullTransparentMesh: 0
---- !u!114 &782029431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782029426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b8fd992df55e840ab2b07b9bddde57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!111 &782029432
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782029426}
-  m_Enabled: 1
+--- !u!95 &782029431
+Animator:
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 0aa01cdf6178054439534e169f1e8305, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 0aa01cdf6178054439534e169f1e8305, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782029426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4140158a49d8e0341a00afdbc44bfbb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &792632473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8903,7 +8881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20.299988, y: -55.100006}
+  m_AnchoredPosition: {x: 20.300049, y: -55.099976}
   m_SizeDelta: {x: 30, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884056836

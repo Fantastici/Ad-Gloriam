@@ -11,107 +11,165 @@ public class TutorialManager : MonoBehaviour
     void Update()
     {
         bool c = isClick();
-        
-            if (popUpindex == 0)
+
+        if (popUpindex == 0)
+        {
+
+            Time.timeScale = 0;
+            popUps[0].SetActive(true);
+            if (c)
             {
 
-                Time.timeScale = 0;
-                popUps[0].SetActive(true);
-                if (c)
-                {
-                    Debug.Log(c);
-                    popUps[0].SetActive(false);
-                    popUpindex++;
-                    Time.timeScale = 1;
-                    c = false;
-                    Debug.Log(c);
-                }
+                popUps[0].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+                c = false;
 
             }
-            if (popUpindex == 1)
-            {
-
-                Time.timeScale = 0;
-                popUps[1].SetActive(true);
-                if (c)
-                {
-                    Debug.Log(c);
-                    popUps[1].SetActive(false);
-                    popUpindex++;
-                    Time.timeScale = 1;
-                    c = false;
-                    Debug.Log(c);
-                }
-
-            }
-            if (popUpindex == 2)
-            {
-
-                Time.timeScale = 0;
-                popUps[2].SetActive(true);
-                if (c)
-                {
-                    Debug.Log(c);
-                    popUps[2].SetActive(false);
-                    popUpindex++;
-                    Time.timeScale = 1;
-                    c = false;
-                    Debug.Log(c);
-                }
-
-            }
-
-            if (popUpindex == 3)
-            {
-
-                Time.timeScale = 0;
-                popUps[3].SetActive(true);
-                if (c)
-                {
-                    Debug.Log(c);
-                    popUps[3].SetActive(false);
-                    popUpindex++;
-                    Time.timeScale = 1;
-                    c = false;
-                    Debug.Log(c);
-                }
-
-            }
-
-            if (popUpindex == 4 && FindObjectOfType<score>().PunteggioFinale().Equals("II"))
-            {
-
-                popUps[4].SetActive(true);
-                Time.timeScale = 0;
-                if (c)
-                {
-                    Debug.Log(c);
-                    popUps[4].SetActive(false);
-                    popUpindex++;
-                    Time.timeScale = 1;
-                    c = false;
-                    Debug.Log(c);
-                }
-
-            }
-
-            if (popUpindex == 5 && FindObjectOfType<score>().PunteggioFinale().Equals("III"))
-            {
-
-                popUps[5].SetActive(true);
-                Time.timeScale = 0;
-                if (c)
-                {
-                    Debug.Log(c);
-                    popUps[5].SetActive(false);
-                    popUpindex++;
-                    Time.timeScale = 1;
-                    c = false;
-                    Debug.Log(c);
-                }
-
 
         }
+        if (popUpindex == 1)
+        {
+
+            Time.timeScale = 0;
+            popUps[1].SetActive(true);
+            if (c)
+            {
+
+                popUps[1].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+                c = false;
+
+            }
+
+        }
+        if (popUpindex == 2)
+        {
+
+            Time.timeScale = 0;
+            popUps[2].SetActive(true);
+            if (c)
+            {
+                popUps[2].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+                c = false;
+            }
+
+        }
+
+        if (popUpindex == 3)
+        {
+
+            Time.timeScale = 0;
+            popUps[3].SetActive(true);
+            if (c)
+            {
+                popUps[3].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+            }
+
+        }
+
+        if (popUpindex == 4 && FindObjectOfType<score>().PunteggioFinale().Equals("II"))
+        {
+
+            popUps[4].SetActive(true);
+            Time.timeScale = 0;
+            if (c)
+            {
+                popUps[4].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+            }
+
+        }
+
+        if (popUpindex == 5 && FindObjectOfType<score>().PunteggioFinale().Equals("III"))
+        {
+            popUps[5].SetActive(true);
+            Time.timeScale = 0;
+            if (c)
+            {
+
+                popUps[5].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+
+            }
+
+        }
+        if (popUpindex == 6 && FindObjectOfType<score>().PunteggioFinale().Equals("IV"))
+        {
+            FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[6].SetActive(true);
+            Time.timeScale = 0;
+            if (c)
+            {
+                popUps[6].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+            }
+
+        }
+        if (popUpindex == 7 && FindObjectOfType<score>().PunteggioFinale().Equals("VI"))
+        {
+           //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[7].SetActive(true);
+            if (c)
+            {
+                popUps[7].SetActive(false);
+                popUpindex++;
+                c = false;
+            }
+        }
+        if (popUpindex == 8)
+        {
+            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[8].SetActive(true);
+            if (c)
+            {
+                popUps[8].SetActive(false);
+                popUpindex++;
+                c = false;
+            }
+        }
+        if (popUpindex == 9)
+        {
+            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[9].SetActive(true);
+            if (c)
+            {
+                popUps[9].SetActive(false);
+                popUpindex++;
+                c = false;
+            }
+        }
+        if (popUpindex == 10)
+        {
+            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[10].SetActive(true);
+            if (c)
+            {
+                popUps[10].SetActive(false);
+                popUpindex++;
+                c = false;
+            }
+        }
+        if (popUpindex == 11)
+        {
+            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[11].SetActive(true);
+            if (c)
+            {
+                popUps[11].SetActive(false);
+                popUpindex++;
+                c = false;
+            }
+        }
+
     }
     private bool isClick()
     {

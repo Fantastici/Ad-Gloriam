@@ -8,8 +8,13 @@ public class GameOverUI : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject GameOver;
+	private bool isrestart;
     private string shareMessage;
-   public void Home(string nome_scena)
+    private void Start()
+    {
+        isrestart = false;
+    }
+    public void Home(string nome_scena)
     {
         SceneManager.LoadScene(nome_scena);
     }
@@ -17,8 +22,13 @@ public class GameOverUI : MonoBehaviour
     {
         SceneManager.LoadScene(nome_scena);
         GameOver.SetActive(false);
+		isrestart = true;
+		
     }
-
+	public bool isRestart()
+    {
+		return isrestart;
+    }
 	public void Share()
     {
 		shareMessage= "Ciao il mio score è di " + FindObjectOfType<score>().PunteggioFinale() + " Punti!";

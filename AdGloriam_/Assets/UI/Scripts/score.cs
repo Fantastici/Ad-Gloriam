@@ -27,12 +27,12 @@ public class score : MonoBehaviour
 
        
     }
-    public float getScoreAmount()
+   /* public float getScoreAmount()
     {
        
         scoreAmount += pointIncreasePerSecond * 0;
         return scoreAmount;
-    }
+    }*/
 
     public String PunteggioFinale()
     {

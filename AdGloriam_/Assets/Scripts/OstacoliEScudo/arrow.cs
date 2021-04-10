@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class arrow : MonoBehaviour
 {
-
+    private AudioSource audioFreccia;
     public float speed = -3f;
     private Rigidbody2D rb;
 
@@ -13,6 +13,7 @@ public class arrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioFreccia = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
@@ -27,7 +28,14 @@ public class arrow : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-   
+    public void setSpeedAZero()
+    {
+        speed = 0;
+    }
+    public AudioSource getAudio()
+    {
+        return audioFreccia;
+    }
     
 }
 

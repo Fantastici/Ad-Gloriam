@@ -29,7 +29,13 @@ public class FinalScore : MonoBehaviour
             }
             if (scoreText.text.Equals(FindObjectOfType<score>().PunteggioFinale()))
             {
-                Time.timeScale = 0;
+                FindObjectOfType<marmoScript>().SetVelocity(0, 0);
+                FindObjectOfType<bgScript>().SetVelocity(0, 0);
+                FindObjectOfType<Gladiatore>().setJumpforceaZero();
+                FindObjectOfType<arrow>().setSpeedAZero();
+                FindObjectOfType<arrow>().getAudio().Stop();
+
+
             }
         }
         if (FindObjectOfType<Gladiatore>().isOut)
@@ -41,8 +47,12 @@ public class FinalScore : MonoBehaviour
             }
             if (scoreText.text.Equals(FindObjectOfType<score>().PunteggioFinale()))
             {
+                FindObjectOfType<marmoScript>().SetVelocity(0, 0);
+                FindObjectOfType<bgScript>().SetVelocity(0, 0);
+                FindObjectOfType<Gladiatore>().setJumpforceaZero();
+                FindObjectOfType<arrow>().setSpeedAZero();
+                FindObjectOfType<arrow>().getAudio().Stop();
 
-                Time.timeScale = 0;
             }
         }
 

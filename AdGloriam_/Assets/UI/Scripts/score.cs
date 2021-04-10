@@ -19,13 +19,11 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FindObjectOfType<Gladiatore>().isDead == false)
+        if (FindObjectOfType<Gladiatore>().isDead == false && FindObjectOfType<Gladiatore>().isOut == false)
         {
             scoreText.text = ToRoman((int)scoreAmount);
             scoreAmount += pointIncreasePerSecond * Time.deltaTime;
-        }
-
-       
+        }      
     }
    /* public float getScoreAmount()
     {

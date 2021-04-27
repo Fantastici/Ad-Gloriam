@@ -2829,7 +2829,7 @@ GameObject:
   - component: {fileID: 782029430}
   - component: {fileID: 782029429}
   - component: {fileID: 782029428}
-  - component: {fileID: 782029432}
+  - component: {fileID: 782029431}
   m_Layer: 5
   m_Name: PauseSwordButton
   m_TagString: Untagged
@@ -2911,18 +2911,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 782029432}
-        m_TargetAssemblyTypeName: Button_Animation, Assembly-CSharp
-        m_MethodName: Press
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &782029429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2961,19 +2949,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782029426}
   m_CullTransparentMesh: 0
---- !u!114 &782029432
-MonoBehaviour:
+--- !u!95 &782029431
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782029426}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b8fd992df55e840ab2b07b9bddde57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ani: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4140158a49d8e0341a00afdbc44bfbb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &802374718
 PrefabInstance:
   m_ObjectHideFlags: 0

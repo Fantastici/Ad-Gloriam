@@ -66,6 +66,11 @@ public class Gladiatore : MonoBehaviour
             isColliso = false;*/
             doubleAllowed = false;
         }
+        if (isShieldOn())
+        {
+            callTime();
+        }
+        
         AttackInput();
         HandleAttacks();
         resetValues();
@@ -132,6 +137,10 @@ public class Gladiatore : MonoBehaviour
         {
             animator.SetTrigger("Attack");
             AttackSound.Attack();
+            if (isShieldOn())
+            {
+                animator.SetTrigger("ShieldOn");
+            }
 
 
         }
@@ -140,6 +149,10 @@ public class Gladiatore : MonoBehaviour
     {
         return isColliso = true;
     }*/
+    public void setShieldFalse()
+    {
+        IsShieldOn = false;
+    }
     public bool isShieldOn()
     {
         if (IsShieldOn)
@@ -151,14 +164,24 @@ public class Gladiatore : MonoBehaviour
             return false;
         }
     }
+    public void callTime()
+    {
+        if (IsShieldOn)
+        {
+            FindObjectOfType<TimeShield>().time();
+        }
+        
+    }
     public void ShieldOn()
     {
-        animator.SetBool("Shield",true);
+        animator.SetTrigger("ShieldOn");
         IsShieldOn = true;
+        
     }
     public void ShieldOff()
     {
-        animator.SetBool("Shield", false);
+        animator.SetTrigger("ShieldOff");
+        IsShieldOn = false;
     }
     
     public void Damage()

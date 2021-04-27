@@ -6,7 +6,7 @@ public class Button_Animation : MonoBehaviour
 {
 
  
-    public Animator ani;
+
    
 
 
@@ -15,7 +15,7 @@ public class Button_Animation : MonoBehaviour
     public void Press()
 
     {
-        ani.enabled = true;
+        
 
 
     }

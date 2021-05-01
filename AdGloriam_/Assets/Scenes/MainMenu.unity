@@ -2794,6 +2794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479718529}
   - component: {fileID: 1479718528}
+  - component: {fileID: 1479718530}
   m_Layer: 0
   m_Name: marmo menu
   m_TagString: Untagged
@@ -2866,6 +2867,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1479718530
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479718527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -7.816096, y: 4.897931}
+  - {x: -6.731422, y: 4.8741083}
+  - {x: -1.782267, y: 5.0047307}
+  - {x: -1.2271255, y: 4.9552836}
+  - {x: -0.13083683, y: 4.955284}
+  - {x: 7.68, y: 5.3906565}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1520591609
 GameObject:
   m_ObjectHideFlags: 0

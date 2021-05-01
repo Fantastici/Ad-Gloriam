@@ -141,6 +141,18 @@ public class Gladiatore : MonoBehaviour
 
         }
     }
+
+    public bool attacking()
+    {
+        if (IsAttacking)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
    
     void HandleAttacks()
     {

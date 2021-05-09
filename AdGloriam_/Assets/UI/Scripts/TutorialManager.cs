@@ -114,9 +114,9 @@ public class TutorialManager : MonoBehaviour
             }
 
         }
-        if (popUpindex == 7 && FindObjectOfType<score>().PunteggioFinale().Equals("VI"))
+        if (popUpindex == 7 && FindObjectOfType<score>().PunteggioFinale().Equals("V"))
         {
-            FindObjectOfType<Gladiatore>().setJumpforceaZero();
+
             popUps[7].SetActive(true);
             Time.timeScale = 0;
             if (c)
@@ -127,31 +127,35 @@ public class TutorialManager : MonoBehaviour
             }
 
         }
-        if (popUpindex == 8 && FindObjectOfType<score>().PunteggioFinale().Equals("VII"))
+        if (popUpindex == 8 && FindObjectOfType<score>().PunteggioFinale().Equals("VI"))
         {
-           //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            FindObjectOfType<Gladiatore>().setJumpforceaZero();
             popUps[8].SetActive(true);
+            Time.timeScale = 0;
             if (c)
             {
                 popUps[8].SetActive(false);
                 popUpindex++;
-                c = false;
+                Time.timeScale = 1;
             }
+
         }
-        if (popUpindex == 9)
+        if (popUpindex == 9 && FindObjectOfType<score>().PunteggioFinale().Equals("IX"))
         {
-            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            
             popUps[9].SetActive(true);
+            Time.timeScale = 0;
             if (c)
             {
                 popUps[9].SetActive(false);
                 popUpindex++;
-                c = false;
+                Time.timeScale = 1;
             }
+
         }
-        if (popUpindex == 10)
+        if (popUpindex == 10 && FindObjectOfType<score>().PunteggioFinale().Equals("X"))
         {
-            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+           //FindObjectOfType<Gladiatore>().setJumpforceaZero();
             popUps[10].SetActive(true);
             if (c)
             {
@@ -178,6 +182,28 @@ public class TutorialManager : MonoBehaviour
             if (c)
             {
                 popUps[12].SetActive(false);
+                popUpindex++;
+                c = false;
+            }
+        }
+        if (popUpindex == 13)
+        {
+            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[13].SetActive(true);
+            if (c)
+            {
+                popUps[13].SetActive(false);
+                popUpindex++;
+                c = false;
+            }
+        }
+        if (popUpindex == 14)
+        {
+            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
+            popUps[14].SetActive(true);
+            if (c)
+            {
+                popUps[14].SetActive(false);
                 popUpindex++;
                 c = false;
             }

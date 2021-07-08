@@ -8,6 +8,7 @@ TagManager:
   - ShortColumn
   - Arrow
   - Attack
+  - Shield
   layers:
   - Default
   - TransparentFX

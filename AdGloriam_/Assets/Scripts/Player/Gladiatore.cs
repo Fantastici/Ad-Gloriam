@@ -68,10 +68,7 @@ public class Gladiatore : MonoBehaviour
             isColliso = false;*/
             doubleAllowed = false;
         }
-        if (isShieldOn())
-        {
-            callTime();
-        }
+        
         
         AttackInput();
         HandleAttacks();
@@ -187,14 +184,7 @@ public class Gladiatore : MonoBehaviour
             return false;
         }
     }
-    public void callTime()
-    {
-        if (IsShieldOn)
-        {
-            FindObjectOfType<TimeShield>().time();
-        }
-        
-    }
+  
     public void ShieldOn()
     {
         animator.SetTrigger("ShieldOn");

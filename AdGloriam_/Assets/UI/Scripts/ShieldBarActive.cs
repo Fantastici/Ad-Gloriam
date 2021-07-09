@@ -8,7 +8,7 @@ public class ShieldBarActive : MonoBehaviour
     public GameObject bar;
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
         if (FindObjectOfType<Gladiatore>().isShieldOn())
         {

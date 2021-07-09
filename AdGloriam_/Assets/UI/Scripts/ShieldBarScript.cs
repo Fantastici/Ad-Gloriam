@@ -7,6 +7,7 @@ public class ShieldBarScript : MonoBehaviour
 {
     Image timerBar;
     public float maxTime = 10f;
+    public ParticleSystem particleSystem;
     float timeLeft;
 
     
@@ -20,14 +21,15 @@ public class ShieldBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (FindObjectOfType<Gladiatore>().isShieldOn())
         {
-       
-            
+            particleSystem.Play();
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maxTime;
             if (timeLeft < 0)
             {
+                particleSystem.Stop();
                 timeLeft = maxTime;
                 timerBar.fillAmount = maxTime;
                 FindObjectOfType<Gladiatore>().ShieldOff();

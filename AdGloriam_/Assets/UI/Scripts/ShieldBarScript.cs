@@ -26,7 +26,6 @@ public class ShieldBarScript : MonoBehaviour
             
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maxTime;
-            Debug.Log(timeLeft);
             if (timeLeft < 0)
             {
                 timeLeft = maxTime;

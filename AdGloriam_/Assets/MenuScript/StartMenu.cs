@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-  public void exit()
+
+    public void exit()
     {
         Application.Quit();
     }

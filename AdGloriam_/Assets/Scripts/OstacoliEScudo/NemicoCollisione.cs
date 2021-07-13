@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NemicoCollisione : MonoBehaviour
 {
+    private float xgladiatoreprimadicontatto;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
@@ -13,13 +14,13 @@ public class NemicoCollisione : MonoBehaviour
                 SoundManagerScript.PlaySound("hit");
                 FindObjectOfType<Gladiatore>().Damage();
                 FindObjectOfType<LifeCount>().LoseLife();
+                this.xgladiatoreprimadicontatto = FindObjectOfType<Gladiatore>().transform.position.x;
+                Vector3 posizioneGladia = new Vector3(this.xgladiatoreprimadicontatto, FindObjectOfType<Gladiatore>().transform.position.y, FindObjectOfType<Gladiatore>().transform.position.z);
+                FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
             }
-            
-           
-
-
         }
         
        
     }
+    
 }

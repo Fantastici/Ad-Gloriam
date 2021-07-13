@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class collisionPlayer : MonoBehaviour
 {
@@ -27,6 +27,7 @@ public class collisionPlayer : MonoBehaviour
 
 
     }
+   
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

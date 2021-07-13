@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 5757358414896103158, guid: 93d27cf29e43847b9a088895c3dd61cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d27cf29e43847b9a088895c3dd61cd, type: 3}
 --- !u!1001 &65626602
@@ -11993,6 +11997,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 5757358414896103158, guid: 93d27cf29e43847b9a088895c3dd61cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d27cf29e43847b9a088895c3dd61cd, type: 3}
 --- !u!1001 &1627740994
@@ -14677,7 +14685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005789222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.67, y: -3.2, z: 0}
+  m_LocalPosition: {x: -9.39, y: -3.1, z: 0}
   m_LocalScale: {x: 0.5226245, y: 0.5095641, z: 0.5226245}
   m_Children:
   - {fileID: 1854106556}

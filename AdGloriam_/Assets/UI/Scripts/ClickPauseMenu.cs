@@ -7,9 +7,9 @@ public class ClickPauseMenu : MonoBehaviour
 {
   
  
-    public GameObject PauseScreen;
+   
     public GameObject PauseButton;
-
+    public GameObject MenuDiPausa;
     bool GamePaused;
 
 
@@ -31,7 +31,7 @@ public class ClickPauseMenu : MonoBehaviour
     public void PauseGame()
     {
         GamePaused = true;
-        PauseScreen.SetActive(true);
+        MenuDiPausa.SetActive(true);
         PauseButton.SetActive(true);
     }
     public void LoadMenu()
@@ -43,12 +43,18 @@ public class ClickPauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         GamePaused = false;
-        PauseScreen.SetActive(false);
+        MenuDiPausa.SetActive(false);
         PauseButton.SetActive(true);
         }
     public void sound_volume(float volume)
     {
         PlayerPrefs.SetFloat("volume", volume);
     }
-    
+    public void Restart(string nome_scena)
+    {
+        SceneManager.LoadScene(nome_scena);
+        MenuDiPausa.SetActive(false);
+
+
+    }
 }

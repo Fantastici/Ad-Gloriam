@@ -8,9 +8,9 @@ public class BoundCameraScript: MonoBehaviour
     void Update()
     {
         Vector3 viewPos = transform.position;
-        if (viewPos.y >= 3.77f)
+        if (viewPos.y >= 3.75f)
         {
-            viewPos = new Vector3(transform.position.x, 3.77f, transform.position.z);
+            viewPos = new Vector3(transform.position.x, 3.75f, transform.position.z);
             Debug.Log("Superato");
         }
         transform.position = viewPos;

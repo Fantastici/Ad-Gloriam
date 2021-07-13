@@ -18,10 +18,6 @@ public class NemicoCollisione : MonoBehaviour
                 Vector3 posizioneGladia = new Vector3(this.xgladiatoreprimadicontatto, FindObjectOfType<Gladiatore>().transform.position.y, FindObjectOfType<Gladiatore>().transform.position.z);
                 FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
             }
-            
-           
-
-
         }
         
        

@@ -230,11 +230,9 @@ public class Gladiatore : MonoBehaviour
             animator.SetTrigger("Grounded");
             
         }
-        
-       
-
 
     }
+   
     /* public float speed = 5f;
      public float JumpForce = 1;
      private float horizontalmove = 0f;

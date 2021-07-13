@@ -10,6 +10,7 @@ public class LifeCount : MonoBehaviour
 
     public void addLife()
     {
+        if (livesRemaining == 3)
         {
             return;
 

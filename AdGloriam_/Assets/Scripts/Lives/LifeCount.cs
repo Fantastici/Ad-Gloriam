@@ -8,6 +8,25 @@ public class LifeCount : MonoBehaviour
     public Image[] lives;
     public int livesRemaining;
 
+    public void addLife()
+    {
+        {
+            return;
+
+        }
+        livesRemaining++;
+        if (livesRemaining == 3)
+        {
+            FindObjectOfType<LifeAnimator1>().animator.SetTrigger("NewLife1");
+
+        }
+
+        if (livesRemaining == 2)
+        {
+            FindObjectOfType<LifeAnimator2>().animator.SetTrigger("NewLife2");
+
+        }
+    }
     public void LoseLife()
     {
         if (livesRemaining == 0)

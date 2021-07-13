@@ -9,6 +9,7 @@ TagManager:
   - Arrow
   - Attack
   - Shield
+  - Helmet
   layers:
   - Default
   - TransparentFX

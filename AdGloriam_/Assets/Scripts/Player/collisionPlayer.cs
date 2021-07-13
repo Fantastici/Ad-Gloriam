@@ -20,7 +20,12 @@ public class collisionPlayer : MonoBehaviour
             
         }
 
-        
+        if (collision.gameObject.tag.Equals("Helmet"))
+        {
+                FindObjectOfType<LifeCount>().addLife();
+        }
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

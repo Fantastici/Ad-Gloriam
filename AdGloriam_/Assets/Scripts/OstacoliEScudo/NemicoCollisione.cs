@@ -11,10 +11,11 @@ public class NemicoCollisione : MonoBehaviour
         {
             if (!FindObjectOfType<Gladiatore>().isShieldOn())
             {
+                this.xgladiatoreprimadicontatto = FindObjectOfType<Gladiatore>().transform.position.x;
+                Debug.Log(this.xgladiatoreprimadicontatto);
                 SoundManagerScript.PlaySound("hit");
                 FindObjectOfType<Gladiatore>().Damage();
                 FindObjectOfType<LifeCount>().LoseLife();
-                this.xgladiatoreprimadicontatto = FindObjectOfType<Gladiatore>().transform.position.x;
                 Vector3 posizioneGladia = new Vector3(this.xgladiatoreprimadicontatto, FindObjectOfType<Gladiatore>().transform.position.y, FindObjectOfType<Gladiatore>().transform.position.z);
                 FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
             }

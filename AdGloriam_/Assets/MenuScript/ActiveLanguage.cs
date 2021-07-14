@@ -13,18 +13,18 @@ public class ActiveLanguage: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(isLanguage.èIt);
+
 
         if (isLanguage.èIt)
         {
-            Debug.Log("Italiano");
+          
             It.SetActive(true);
             Eng.SetActive(false);
         }
         else if (isLanguage.èIng)
 
         {
-            Debug.Log("Eng");
+            
             Eng.SetActive(true);
             It.SetActive(false);
         }

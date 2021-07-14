@@ -152,6 +152,24 @@ public class TutorialManager : MonoBehaviour
             }
 
         }
+
+
+        if (popUpindex == 9)
+        {
+            Debug.Log(popUpindex);
+            popUps[9].SetActive(true);
+            Time.timeScale = 0;
+            if (c)
+            {
+                popUps[9].SetActive(false);
+                popUpindex++;
+                Time.timeScale = 1;
+            }
+
+        }
+
+
+
         if (popUpindex == 9 && FindObjectOfType<score>().PunteggioFinale().Equals("IX"))
         {
             
@@ -222,7 +240,7 @@ public class TutorialManager : MonoBehaviour
         }
 
     }
-    private bool isClick()
+    public bool isClick()
     {
         if (Input.GetMouseButtonUp(0))
         {

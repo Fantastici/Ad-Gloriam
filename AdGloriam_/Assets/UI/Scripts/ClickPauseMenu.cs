@@ -23,16 +23,20 @@ public class ClickPauseMenu : MonoBehaviour
     void Update()
     {
         if (GamePaused)
+        {
             Time.timeScale = 0;
+        }
         else
             Time.timeScale = 1;
     }
 
     public void PauseGame()
     {
+        
         GamePaused = true;
         MenuDiPausa.SetActive(true);
         PauseButton.SetActive(true);
+        
     }
     public void LoadMenu()
     {

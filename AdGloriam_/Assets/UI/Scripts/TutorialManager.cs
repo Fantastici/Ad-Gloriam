@@ -21,6 +21,7 @@ public class TutorialManager : MonoBehaviour
             {
 
                 popUps[0].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
                 c = false;
@@ -37,6 +38,7 @@ public class TutorialManager : MonoBehaviour
             {
 
                 popUps[1].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
                 c = false;
@@ -52,6 +54,7 @@ public class TutorialManager : MonoBehaviour
             if (c)
             {
                 popUps[2].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
                 c = false;
@@ -67,6 +70,7 @@ public class TutorialManager : MonoBehaviour
             if (c)
             {
                 popUps[3].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
             }
@@ -78,9 +82,12 @@ public class TutorialManager : MonoBehaviour
 
             popUps[4].SetActive(true);
             Time.timeScale = 0;
+            FindObjectOfType<Gladiatore>().setJumpforceaZero();
             if (c)
             {
+                
                 popUps[4].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
             }
@@ -93,10 +100,13 @@ public class TutorialManager : MonoBehaviour
             Time.timeScale = 0;
             if (c)
             {
-
+                
+               
                 popUps[5].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
+             
 
             }
 
@@ -109,6 +119,7 @@ public class TutorialManager : MonoBehaviour
             if (c)
             {
                 popUps[6].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
             }
@@ -122,6 +133,7 @@ public class TutorialManager : MonoBehaviour
             if (c)
             {
                 popUps[7].SetActive(false);
+                FindObjectOfType<Gladiatore>().setJumpforce(23f);
                 popUpindex++;
                 Time.timeScale = 1;
             }
@@ -214,6 +226,7 @@ public class TutorialManager : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
+            FindObjectOfType<Gladiatore>().setJumpforceaZero();
             return true;
         }
         else

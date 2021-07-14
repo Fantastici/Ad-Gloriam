@@ -130,6 +130,10 @@ public class Gladiatore : MonoBehaviour
     {
         jumpForce = 0;
     }
+    public void setJumpforce(float force)
+    {
+        this.jumpForce = force;
+    }
     void AttackInput()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))

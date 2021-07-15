@@ -66,9 +66,9 @@ PlayerSettings:
   use32BitDisplayBuffer: 1
   preserveFramebufferAlpha: 0
   disableDepthAndStencilBuffers: 0
-  androidStartInFullscreen: 1
+  androidStartInFullscreen: 0
   androidRenderOutsideSafeArea: 1
-  androidUseSwappy: 1
+  androidUseSwappy: 0
   androidBlitType: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b6c105563bb913b4894d603a0a768b3a, type: 3}
+      m_Icon: {fileID: 2800000, guid: 080d8b5194e83f842a79c695a6e3d23d, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class score : MonoBehaviour
 {
-    public Text scoreText; 
+    public Text scoreText;
+    public Text highScore;
+    private static Text hs;
+    private static float HighScore=1f;
     public float scoreAmount;
     public float pointIncreasePerSecond;
+    public static bool verificato = false;
     // Start is called before the first frame update
     void Start()
     {
+         highScore.text = ToRoman((int)HighScore);
         scoreAmount = 1f;
         pointIncreasePerSecond = 0.5f;
     }
@@ -23,8 +28,18 @@ public class score : MonoBehaviour
         {
             scoreText.text = ToRoman((int)scoreAmount);
             scoreAmount += pointIncreasePerSecond * Time.deltaTime;
-        }      
+        }
+
+
+      
+            highScore.text = ToRoman((int)HighScore);
+       
+
+
+
+
     }
+
    /* public float getScoreAmount()
     {
        
@@ -32,11 +47,21 @@ public class score : MonoBehaviour
         return scoreAmount;
     }*/
 
+
     public String PunteggioFinale()
     {
+        if (HighScore < scoreAmount)
+        {
+            HighScore = scoreAmount;
+            highScore.color = Color.green;
+        }
+      
+
+       
         scoreText.text = ToRoman((int)scoreAmount);
         scoreAmount += pointIncreasePerSecond * 0;
         return scoreText.text;
+       
     }
    
     public  string ToRoman(int number)

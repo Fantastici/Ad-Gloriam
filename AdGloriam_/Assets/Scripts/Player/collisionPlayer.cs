@@ -5,25 +5,30 @@ using UnityEngine;
 
 public class collisionPlayer : MonoBehaviour
 {
- 
+    private int count = 0;
+    private bool verificato = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+     
         if (collision.gameObject.tag.Equals("Arrow"))
         {
-            Debug.Log("collisione");
-            if (!FindObjectOfType<Gladiatore>().isShieldOn() )
+
+            this.verificato = true;
+            Debug.Log(FindObjectOfType<Gladiatore>().transform.position.x);
+            if (!FindObjectOfType<Gladiatore>().isShieldOn() && count==0)
             {
-              
+                this.count++;
                 SoundManagerScript.PlaySound("hit");
                 FindObjectOfType<Gladiatore>().Damage();
                 FindObjectOfType<LifeCount>().LoseLife();
-                if (FindObjectOfType<Gladiatore>().transform.position.x < -9.24f)
-                {
-                    Vector3 posizioneGladia = new Vector3(-9.24f, transform.position.y, transform.position.z);
-                    FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
-                }
+             
+
             }
-            
+          
+        }
+        else
+        {
+            this.verificato = false;
         }
 
         if (collision.gameObject.tag.Equals("Helmet"))
@@ -33,7 +38,15 @@ public class collisionPlayer : MonoBehaviour
 
 
     }
-   
+    void Update()
+    {
+        if (this.verificato)
+        {
+            Vector3 posizioneGladia = new Vector3(-9.24f, FindObjectOfType<Gladiatore>().transform.position.y, FindObjectOfType<Gladiatore>().transform.position.z);
+            FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
+        }
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

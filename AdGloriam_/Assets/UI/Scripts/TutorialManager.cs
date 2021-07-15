@@ -156,7 +156,7 @@ public class TutorialManager : MonoBehaviour
 
         if (popUpindex == 9 && FindObjectOfType<score>().PunteggioFinale().Equals("VII"))
         {
-            Debug.Log(popUpindex);
+
             popUps[9].SetActive(true);
             Time.timeScale = 0;
             if (c)

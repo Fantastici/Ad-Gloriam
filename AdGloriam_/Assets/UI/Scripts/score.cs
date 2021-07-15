@@ -32,10 +32,11 @@ public class score : MonoBehaviour
 
 
 
-        if (HighScore < scoreAmount)
+        if (HighScore < scoreAmount && FindObjectOfType<Gladiatore>().isDead == false && FindObjectOfType<Gladiatore>().isOut == false)
         {
 
             highScore.text = ToRoman((int)scoreAmount);
+            highScore.color = Color.green;
         }
         else
         {
@@ -59,14 +60,13 @@ public class score : MonoBehaviour
         {
             
             HighScore = scoreAmount;
-            highScore.color = Color.green;
+            
 
         }
       
 
        
         scoreText.text = ToRoman((int)scoreAmount);
-        scoreAmount += pointIncreasePerSecond * 0;
         return scoreText.text;
        
     }

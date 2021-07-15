@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class NemicoCollisione : MonoBehaviour
 {
-    private static int count;
+    private  int count;
+    private bool verificato = false;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            count += 1;
-            if (!FindObjectOfType<Gladiatore>().isShieldOn() && count == 1)
+            this.verificato = true;
+            this.count += 1;
+            if (!FindObjectOfType<Gladiatore>().isShieldOn() && this.count == 1)
             {
                
                 Debug.Log(count);
@@ -22,8 +24,19 @@ public class NemicoCollisione : MonoBehaviour
                 FindObjectOfType<LifeCount>().LoseLife();
             }
         }
+        else
+        {
+            this.verificato = false;
+        }
         count = 0;
     }
-   
-    
+    void Update()
+    {
+        if (this.verificato)
+        {
+            Vector3 posizioneGladia = new Vector3(-9.24f, FindObjectOfType<Gladiatore>().transform.position.y, FindObjectOfType<Gladiatore>().transform.position.z);
+            FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
+        }
+    }
+
 }

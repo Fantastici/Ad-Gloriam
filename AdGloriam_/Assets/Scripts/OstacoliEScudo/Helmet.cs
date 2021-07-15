@@ -8,6 +8,7 @@ public class Helmet : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            SoundManagerScript.PlaySound("helmetSound");
             Destroy(gameObject);
         }
     }

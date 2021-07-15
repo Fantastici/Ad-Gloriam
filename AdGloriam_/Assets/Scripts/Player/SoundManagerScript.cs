@@ -5,7 +5,9 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
     public static AudioClip scudoSound;
+    public static AudioClip helmetSound;
     public static AudioClip swordSound;
+    public static AudioClip highScoreSound;
     public static AudioClip hit;
     static AudioSource audioSrc;
 
@@ -14,6 +16,8 @@ public class SoundManagerScript : MonoBehaviour
     {
         scudoSound = Resources.Load<AudioClip>("scudoSound");
         swordSound = Resources.Load<AudioClip>("sword_sound2");
+        helmetSound = Resources.Load<AudioClip>("helmetSound");
+        highScoreSound = Resources.Load<AudioClip>("highScoreSound");
         hit = Resources.Load<AudioClip>("hit");
         audioSrc = GetComponent<AudioSource>();
 
@@ -31,6 +35,12 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "hit":
                 audioSrc.PlayOneShot(hit);
+                break;
+            case "helmetSound":
+                audioSrc.PlayOneShot(helmetSound);
+                break;
+            case "highScoreSound":
+                audioSrc.PlayOneShot(highScoreSound);
                 break;
         }
     }

@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class NemicoCollisione : MonoBehaviour
 {
-    private float xgladiatoreprimadicontatto;
+    private static int count;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            if (!FindObjectOfType<Gladiatore>().isShieldOn())
+            count += 1;
+            if (!FindObjectOfType<Gladiatore>().isShieldOn() && count == 1)
             {
-                this.xgladiatoreprimadicontatto = FindObjectOfType<Gladiatore>().transform.position.x;
-                Debug.Log(this.xgladiatoreprimadicontatto);
+               
+                Debug.Log(count);
+                Debug.Log("ENtrato");
                 SoundManagerScript.PlaySound("hit");
+                Vector3 posizioneGladia = new Vector3(-9.24f, FindObjectOfType<Gladiatore>().transform.position.y, FindObjectOfType<Gladiatore>().transform.position.z);
+                FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
                 FindObjectOfType<Gladiatore>().Damage();
                 FindObjectOfType<LifeCount>().LoseLife();
-                Vector3 posizioneGladia = new Vector3(this.xgladiatoreprimadicontatto, FindObjectOfType<Gladiatore>().transform.position.y, FindObjectOfType<Gladiatore>().transform.position.z);
-                FindObjectOfType<Gladiatore>().transform.position = posizioneGladia;
             }
         }
-        
-       
+        count = 0;
     }
+   
     
 }

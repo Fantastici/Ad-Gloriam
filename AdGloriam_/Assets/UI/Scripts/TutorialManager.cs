@@ -184,30 +184,35 @@ public class TutorialManager : MonoBehaviour
 
         }
         // pop freccia
-        if (popUpindex == 11 && FindObjectOfType<score>().PunteggioFinale().Equals("X"))
+        if (popUpindex == 11 && FindObjectOfType<score>().PunteggioFinale().Equals("XIV"))
         {
            //FindObjectOfType<Gladiatore>().setJumpforceaZero();
             popUps[11].SetActive(true);
+            Time.timeScale = 0;
             if (c)
             {
                 popUps[11].SetActive(false);
                 popUpindex++;
+                Time.timeScale = 1;
                 c = false;
+             
             }
         }
         // pop life
-        if (popUpindex == 12 && FindObjectOfType<score>().PunteggioFinale().Equals("XI"))
+        if (popUpindex == 12 && FindObjectOfType<score>().PunteggioFinale().Equals("XV"))
         {
             //FindObjectOfType<Gladiatore>().setJumpforceaZero();
             popUps[12].SetActive(true);
+            Time.timeScale = 0;
             if (c)
             {
                 popUps[12].SetActive(false);
                 popUpindex++;
                 c = false;
+                Time.timeScale = 1;
             }
         }
-        if (popUpindex == 13 && FindObjectOfType<score>().PunteggioFinale().Equals("XII"))
+        if (popUpindex == 13 && FindObjectOfType<score>().PunteggioFinale().Equals("XVII"))
         {
             //FindObjectOfType<Gladiatore>().setJumpforceaZero();
             popUps[13].SetActive(true);

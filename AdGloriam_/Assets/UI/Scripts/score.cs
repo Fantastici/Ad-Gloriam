@@ -16,7 +16,7 @@ public class score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highScore.text = ToRoman((int)HighScore);
+        
         scoreAmount = 1f;
         pointIncreasePerSecond = 0.5f;
     }
@@ -29,13 +29,18 @@ public class score : MonoBehaviour
             scoreText.text = ToRoman((int)scoreAmount);
             scoreAmount += pointIncreasePerSecond * Time.deltaTime;
         }
-       
-
-      
-          
-       
 
 
+
+        if (HighScore < scoreAmount)
+        {
+
+            highScore.text = ToRoman((int)scoreAmount);
+        }
+        else
+        {
+            highScore.text = ToRoman((int)HighScore);
+        }
 
 
     }
@@ -54,7 +59,6 @@ public class score : MonoBehaviour
         {
             
             HighScore = scoreAmount;
-        
             highScore.color = Color.green;
 
         }

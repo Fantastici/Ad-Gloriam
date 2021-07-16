@@ -8,7 +8,7 @@ public class CollisionPlayerTut : MonoBehaviour
     private bool verificato = false;
 private bool verifica()
     {
-        if (isLanguage.èIng)
+        if (FindObjectOfType<isLanguage>().IsEnglish())
         {
             this.count = 0;
             return true;

@@ -13,11 +13,18 @@ public class GameOver : MonoBehaviour
 
         if (FindObjectOfType<Gladiatore>().isDead )
             {
+
             _ = WaitTime();
             finito.SetActive(true);
             }
         if (FindObjectOfType<Gladiatore>().isOut)
         {
+
+            if (score.HighScore < FindObjectOfType<score>().scoreAmount)
+            {
+                SoundManagerScript.PlaySound("highScoreSound");
+
+            }
             finito.SetActive(true);
         }
       

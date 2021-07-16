@@ -11,7 +11,7 @@ public class BoundCameraScript: MonoBehaviour
         if (viewPos.y >= 3.75f)
         {
             viewPos = new Vector3(transform.position.x, 3.75f, transform.position.z);
-            Debug.Log("Superato");
+
         }
         transform.position = viewPos;
     }

@@ -42,6 +42,7 @@ public class Gladiatore : MonoBehaviour
         {
 
             isOut = true;
+
             
         }
         if (isGrounded)

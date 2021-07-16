@@ -8,8 +8,9 @@ public class score : MonoBehaviour
 {
     public Text scoreText;
     public Text highScore;
+
     private static Text hs;
-    private static float HighScore=1f;
+    public static float HighScore=1f;
     public float scoreAmount;
     public float pointIncreasePerSecond;
     public static bool verificato = false;
@@ -37,6 +38,7 @@ public class score : MonoBehaviour
 
             highScore.text = ToRoman((int)scoreAmount);
             highScore.color = Color.green;
+           
         }
         else
         {

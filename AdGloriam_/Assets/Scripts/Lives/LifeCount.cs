@@ -7,6 +7,7 @@ public class LifeCount : MonoBehaviour
 {
     public Image[] lives;
     public int livesRemaining;
+    private int count = 0;
 
     public void addLife()
     {

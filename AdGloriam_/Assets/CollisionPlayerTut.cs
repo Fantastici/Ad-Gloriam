@@ -6,20 +6,31 @@ public class CollisionPlayerTut : MonoBehaviour
 {
     private int count = 0;
     private bool verificato = false;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+private bool verifica()
     {
-
-        if (collision.gameObject.CompareTag("Arrow") && this.count == 0)
+        if (isLanguage.èIng)
         {
+            this.count = 0;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Arrow") && (this.count == 0 || verifica()))
+        {
+            FindObjectOfType<Gladiatore>().isOut = false;
             this.verificato = true;
-
             this.count += 1;
 
             if (!FindObjectOfType<Gladiatore>().isShieldOn())
             {
 
-       
+
                 SoundManagerScript.PlaySound("hit");
                 FindObjectOfType<Gladiatore>().Damage();
                 FindObjectOfType<LifeCount>().LoseLife();
